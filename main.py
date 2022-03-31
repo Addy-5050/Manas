@@ -14,8 +14,7 @@ phidegree = float(input ("give the total angle of the arms that can be turned"))
 phi = phidegree*3.148/180 #converting it into radians
 wx =  pos_x - a3*math.cos(phi)# finding the x coordinates of wrist or end point of arm 2
 wy = pos_y -a3*math.sin(phi)# finding the y coordinates of wrist or end point of arm 2
-c2 = (wx*wx + wy*wy -a1*a1 - a2*a2)/(2*a1*a2) # finding the angle of second arm. if the cos value of angle doesnt is lesser than 1 it means that it can achieve the position if not then the position is notachievable by the arm
-#  finding two values of each angles cause the position can be achieved by 2 ways
+c2 = (wx*wx + wy*wy -a1*a1 - a2*a2)/(2*a1*a2) 
 if c2<=1:
     s2_1 = math.sqrt(1- c2*c2)#sin values of 2nd angle by 1st way
     s2_2 = -math.sqrt (1-c2*c2)#sin values of 2nd angle by 2nd way
